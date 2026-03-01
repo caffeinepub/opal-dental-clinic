@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ──────────────────────────────────────────────
+   FONTS — Figtree (display/headings) + General Sans (body)
+   ────────────────────────────────────────────── */
+@font-face {
+  font-family: "Figtree";
+  src: url("/assets/fonts/Figtree.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ──────────────────────────────────────────────
+   DESIGN TOKENS — Opal Dental Clinic Light Theme
+   Palette: crisp white + teal accent + slate navy
+   ────────────────────────────────────────────── */
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Backgrounds */
+    --background: 0.985 0 0;           /* near-white */
+    --foreground: 0.18 0.02 240;       /* deep slate-navy */
+
+    /* Card */
+    --card: 1 0 0;                     /* pure white */
+    --card-foreground: 0.18 0.02 240;
+
+    /* Popover */
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.02 240;
+
+    /* Primary — teal */
+    --primary: 0.56 0.13 192;          /* #0d9488-ish teal */
+    --primary-foreground: 1 0 0;
+
+    /* Secondary — light teal tint */
+    --secondary: 0.95 0.025 192;
+    --secondary-foreground: 0.56 0.13 192;
+
+    /* Muted */
+    --muted: 0.96 0.005 240;
+    --muted-foreground: 0.48 0.02 240;
+
+    /* Accent — sky blue */
+    --accent: 0.92 0.04 220;
+    --accent-foreground: 0.22 0.06 220;
+
+    /* Destructive */
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 1 0 0;
+
+    /* Border / Input / Ring */
+    --border: 0.9 0.01 240;
+    --input: 0.9 0.01 240;
+    --ring: 0.56 0.13 192;
+
+    /* Charts */
+    --chart-1: 0.56 0.13 192;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+
+    /* Sidebar */
+    --sidebar: 0.985 0 0;
+    --sidebar-foreground: 0.18 0.02 240;
+    --sidebar-primary: 0.56 0.13 192;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.95 0.025 192;
+    --sidebar-accent-foreground: 0.56 0.13 192;
+    --sidebar-border: 0.9 0.01 240;
+    --sidebar-ring: 0.56 0.13 192;
+
+    /* Custom dental theme tokens */
+    --teal: 0.56 0.13 192;
+    --teal-light: 0.92 0.04 192;
+    --teal-dark: 0.42 0.11 192;
+    --navy: 0.18 0.04 240;
+    --section-alt: 0.975 0.008 220;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Figtree", sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+}
